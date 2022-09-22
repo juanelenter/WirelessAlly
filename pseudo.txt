@@ -1,0 +1,17 @@
+
+Data: 
+    T: Training set
+    E: Eval set
+    A: Active Learning set
+    Data generation: Hl o Hs in data_gen.py
+
+Method (one iteration):
+    Primal dual constrained learning of GNN on T:
+    Evaluate GNN on E.
+    Train dual variable predictor (DVP) on T.
+    Evaluate DVP on A.
+    B <- Most informative from A.
+    T = T u B
+
+Questions:
+    - Whats this # calculate baseline rates for test phase ? Do we need it in the pool ?
